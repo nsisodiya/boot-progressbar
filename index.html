@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <title>Boot-Progressbar Demo</title>
+
+    <!-- Importing Polyfill -->
+    <script src="bower_components/platform/platform.js"></script>
+    <script src="dist/boot-progressbar.js"></script>
+    <link charset='utf-8' href='dist/boot-progressbar.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+    <!-- Using Custom Element -->
+    <h2>Simple Progressbar with Value</h2>
+
+    <pre lang="js">
+    &lt;boot-progressbar value="60">&lt;/boot-progressbar>
+    </pre>
+    <boot-progressbar value="60"></boot-progressbar>
+
+    <h2>Simple Progressbar without Value - Intermediate</h2>
+
+    <pre lang="js">
+    &lt;boot-progressbar <b>intermediate</b>>&lt;/boot-progressbar>
+    </pre>
+    <boot-progressbar intermediate></boot-progressbar>
+
+
+    <h2>Progressbar with Status</h2>
+
+    <pre lang="js">
+    &lt;boot-progressbar class="inter"  <b>showStatus</b> value="20">&lt;/boot-progressbar>
+    </pre>
+    <boot-progressbar showStatus value="20"></boot-progressbar>
+
+    <h2>Striped</h2>
+
+    <pre lang="js">
+    &lt;boot-progressbar showStatus value="15" <b>striped</b>>&lt;/boot-progressbar>
+    </pre>
+    <boot-progressbar showStatus value="15" striped></boot-progressbar>
+
+    <h2>Striped and Active</h2>
+
+    <pre lang="js">
+    &lt;boot-progressbar showStatus value="20" <b>striped active</b>>&lt;/boot-progressbar>
+    </pre>
+    <boot-progressbar showStatus value="20" striped active></boot-progressbar>
+
+
+    <h2>Types of Progressbar</h2>
+
+    <pre lang="js">
+        &lt;boot-progressbar showStatus value="20" striped active <b>type="success"</b>>&lt;/boot-progressbar>
+        &lt;boot-progressbar showStatus value="20" striped active <b>type="info"</b>>&lt;/boot-progressbar>
+        &lt;boot-progressbar showStatus value="20" striped active <b>type="danger"</b>>&lt;/boot-progressbar>
+        &lt;boot-progressbar showStatus value="20" striped active <b>type="warning"</b>>&lt;/boot-progressbar>
+    </pre>
+    <boot-progressbar showStatus value="20" striped active type="success"></boot-progressbar>
+    <boot-progressbar showStatus value="20" striped active type="info"></boot-progressbar>
+    <boot-progressbar showStatus value="20" striped active type="danger"></boot-progressbar>
+    <boot-progressbar showStatus value="20" striped active type="warning"></boot-progressbar>
+
+    <h2>Set Progress from JavaScript</h2>
+
+    <pre lang="js">
+    &lt;boot-progressbar showStatus <b>id="p1"</b> value="20" striped active>&lt;/boot-progressbar>
+    &lt;button <b>onclick="document.getElementById('p1').value=40;"</b>>Click to Set 40%&lt;/button>
+    </pre>
+
+    <boot-progressbar showStatus id="p1" value="20" striped active></boot-progressbar>
+    <button onclick="document.getElementById('p1').value=40;"><b>Click to Set 40%</b></button>
+
+    <h2>Min/Max</h2>
+
+
+    <pre lang="js">
+    &lt;boot-progressbar showStatus <b>min="100" max="900" id="p2"</b> value="300" striped active>&lt;/boot-progressbar>
+    &lt;button <b>onclick="document.getElementById('p2').value=800;"</b>>Click to Set 800&lt;/button>
+    </pre>
+
+    <boot-progressbar showStatus min="100" max="900" id="p2" value="300" striped active></boot-progressbar>
+    <button onclick="document.getElementById('p2').value=800;"><b>Click to Set 800</b></button>
+
+
+    <h2>Min/Max with Showing Actual Values</h2>
+
+
+    <pre lang="js">
+    &lt;boot-progressbar showStatus <b>min="100" max="900" showActualValue</b> id="p3" value="300" striped active>&lt;/boot-progressbar>
+    &lt;button <b>onclick="document.getElementById('p3').value=800;"</b>>Click to Set 800&lt;/button>
+    </pre>
+
+    <boot-progressbar showStatus min="100" max="900" showActualValue id="p3" value="300" striped active></boot-progressbar>
+    <button onclick="document.getElementById('p3').value=800;"><b>Click to Set 800</b></button>
+
+
+    <h2>Play with various boolean options</h2>
+
+
+    <pre lang="js">
+    &lt;boot-progressbar showStatus <b>min="100" max="900" </b> id="p4" value="300" striped active>&lt;/boot-progressbar>
+    &lt;button onclick="document.getElementById('p4').showStatus=!document.getElementById('p4').showStatus;"><b>Toggle - showStatus</b>&lt;/button>
+    &lt;button onclick="document.getElementById('p4').striped=!document.getElementById('p4').striped;"><b>Toggle - striped</b>&lt;/button>
+    &lt;button onclick="document.getElementById('p4').active=!document.getElementById('p4').active;"><b>Toggle - active</b>&lt;/button>
+    &lt;button onclick="document.getElementById('p4').showActualValue=!document.getElementById('p4').showActualValue;"><b>Toggle - showActualValue</b>&lt;/button>
+    &lt;button onclick="document.getElementById('p4').intermediate=!document.getElementById('p4').intermediate;"><b>Toggle - intermediate</b>&lt;/button>
+    &lt;button <b>onclick="document.getElementById('p4').type='default';"</b>>Default&lt;/button>
+    &lt;button <b>onclick="document.getElementById('p4').type='success';"</b>>Success&lt;/button>
+    &lt;button <b>onclick="document.getElementById('p4').type='warning';"</b>>Warning&lt;/button>
+    &lt;button <b>onclick="document.getElementById('p4').type='info';"</b>>Info&lt;/button>
+    &lt;button <b>onclick="document.getElementById('p4').type='danger';"</b>>Danger&lt;/button>
+
+    </pre>
+
+    <boot-progressbar showStatus min="100" max="900" id="p4" value="300" striped active></boot-progressbar>
+    <button onclick="document.getElementById('p4').showStatus=!document.getElementById('p4').showStatus;">Toggle - showStatus</button>
+    <button onclick="document.getElementById('p4').striped=!document.getElementById('p4').striped;">Toggle - striped</button>
+    <button onclick="document.getElementById('p4').active=!document.getElementById('p4').active;">Toggle - active</button>
+    <button onclick="document.getElementById('p4').showActualValue=!document.getElementById('p4').showActualValue;">Toggle - showActualValue</button>
+    <button onclick="document.getElementById('p4').intermediate=!document.getElementById('p4').intermediate;">Toggle - intermediate</button>
+    <button onclick="document.getElementById('p4').type='default';">Default</button>
+    <button onclick="document.getElementById('p4').type='success';">Success</button>
+    <button onclick="document.getElementById('p4').type='warning';">Warning</button>
+    <button onclick="document.getElementById('p4').type='info';">Info</button>
+    <button onclick="document.getElementById('p4').type='danger';">Danger</button>
+
+  </body>
+</html>
