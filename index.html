@@ -104,11 +104,11 @@
 
     <pre lang="js">
     &lt;boot-progressbar showStatus <b>min="100" max="900" </b> id="p4" value="300" striped active>&lt;/boot-progressbar>
-    &lt;button onclick="document.getElementById('p4').showStatus=!document.getElementById('p4').showStatus;"><b>Toggle - showStatus</b>&lt;/button>
-    &lt;button onclick="document.getElementById('p4').striped=!document.getElementById('p4').striped;"><b>Toggle - striped</b>&lt;/button>
-    &lt;button onclick="document.getElementById('p4').active=!document.getElementById('p4').active;"><b>Toggle - active</b>&lt;/button>
-    &lt;button onclick="document.getElementById('p4').showActualValue=!document.getElementById('p4').showActualValue;"><b>Toggle - showActualValue</b>&lt;/button>
-    &lt;button onclick="document.getElementById('p4').intermediate=!document.getElementById('p4').intermediate;"><b>Toggle - intermediate</b>&lt;/button>
+    &lt;button onclick="document.getElementById('p4').toggle('showStatus');"><b>Toggle - showStatus</b>&lt;/button>
+    &lt;button onclick="document.getElementById('p4').toggle('striped');"><b>Toggle - striped</b>&lt;/button>
+    &lt;button onclick="document.getElementById('p4').toggle('active');"><b>Toggle - active</b>&lt;/button>
+    &lt;button onclick="document.getElementById('p4').toggle('showActualValue');"><b>Toggle - showActualValue</b>&lt;/button>
+    &lt;button onclick="document.getElementById('p4').toggle('intermediate');"><b>Toggle - intermediate</b>&lt;/button>
     &lt;button <b>onclick="document.getElementById('p4').type='default';"</b>>Default&lt;/button>
     &lt;button <b>onclick="document.getElementById('p4').type='success';"</b>>Success&lt;/button>
     &lt;button <b>onclick="document.getElementById('p4').type='warning';"</b>>Warning&lt;/button>
@@ -118,11 +118,11 @@
     </pre>
 
     <boot-progressbar showStatus min="100" max="900" id="p4" value="300" striped active></boot-progressbar>
-    <button onclick="document.getElementById('p4').showStatus=!document.getElementById('p4').showStatus;">Toggle - showStatus</button>
-    <button onclick="document.getElementById('p4').striped=!document.getElementById('p4').striped;">Toggle - striped</button>
-    <button onclick="document.getElementById('p4').active=!document.getElementById('p4').active;">Toggle - active</button>
-    <button onclick="document.getElementById('p4').showActualValue=!document.getElementById('p4').showActualValue;">Toggle - showActualValue</button>
-    <button onclick="document.getElementById('p4').intermediate=!document.getElementById('p4').intermediate;">Toggle - intermediate</button>
+    <button onclick="document.getElementById('p4').toggle('showStatus');">Toggle - showStatus</button>
+    <button onclick="document.getElementById('p4').toggle('striped');">Toggle - striped</button>
+    <button onclick="document.getElementById('p4').toggle('active');">Toggle - active</button>
+    <button onclick="document.getElementById('p4').toggle('showActualValue');">Toggle - showActualValue</button>
+    <button onclick="document.getElementById('p4').toggle('intermediate');">Toggle - intermediate</button>
     <button onclick="document.getElementById('p4').type='default';">Default</button>
     <button onclick="document.getElementById('p4').type='success';">Success</button>
     <button onclick="document.getElementById('p4').type='warning';">Warning</button>

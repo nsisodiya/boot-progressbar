@@ -65,7 +65,7 @@
     },
     toggle: function(attr) {
       if (booleanAttrs.indexOf(attr) !== -1) {
-        this.setBooleanAttribute(attr, !this.setBooleanAttribute(attr));
+        this.setBooleanAttribute(attr, !this.getBooleanAttribute(attr));
       }
     },
     setBooleanAttribute: function(attr, newVal) {
