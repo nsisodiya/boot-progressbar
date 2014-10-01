@@ -89,7 +89,7 @@
         p = 0;
       }
       this.querySelector(".progress-bar").style.width = p + "%";
-      this.querySelector("span.status .percentage").innerHTML = p + "%";
+      this.querySelector("span.status .percentage").innerHTML = window.parseInt(p * 10, 10) / 10 + "%";
       this.querySelector("span.status .value").innerHTML = this.value;
     }
   });

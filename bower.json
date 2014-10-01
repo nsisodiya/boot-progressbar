@@ -6,7 +6,7 @@
     "Narendra Sisodiya <narendra@narendrasisodiya.com>"
   ],
   "description": "Boot Progressbar",
-  "main": "dist/boot-progressbar.js",
+  "main": "src/boot-progressbar.js",
   "keywords": [
     "webcomponents"
   ],
